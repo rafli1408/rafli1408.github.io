@@ -114,6 +114,7 @@ function restartAutoSlide(sliderId) {
 }
 
 window.addEventListener('load', () => {
-  initSlider('slider-sipa');
-  initSlider('slider-ppdb');
+  document.querySelectorAll('[id^="slider-"]').forEach(slider => {
+    initSlider(slider.id);
+  });
 });

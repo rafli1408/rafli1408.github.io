@@ -408,9 +408,15 @@ section {
 /* ===== PORTOFOLIO ===== */
 .portofolio-content {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-template-columns: repeat(2, minmax(320px, 1fr));
   gap: 3rem;
-  margin-top: 5rem;
+  margin: 5rem auto 0;
+  max-width: 1200px;
+}
+.portofolio-content > .porto-card:nth-child(odd):last-child {
+  grid-column: 1 / -1;
+  justify-self: center;
+  max-width: 640px;
 }
 .porto-card {
   background: var(--second-bg-color);
